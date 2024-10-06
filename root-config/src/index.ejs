@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Root Config</title>
+
+  <style>
+    nav {
+      padding: 10px;
+      background-color: #f0f0f0;
+    }
+    nav a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+</head>
+<body>
+  <nav>
+    <a href="#/dashboard">Dashboard</a>
+    <a href="#/profile">Profile</a>
+  </nav>
+  <div id="micro-frontend-container"></div>
+  <script src="https://unpkg.com/systemjs/dist/system.min.js"></script>
+  <script src="https://unpkg.com/single-spa/lib/system/single-spa.min.js"></script>
+
+  <script>
+    System.import('@abhiraj/root-config');
+  </script>
+  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+</body>
+</html>
